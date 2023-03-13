@@ -50,10 +50,9 @@ DB구성
 
 # 루틴 인증 영상
 
-<img src="https://user-images.githubusercontent.com/85150438/188340107-a5a9700f-b0c6-467d-96c4-7591318d17af.gif"/>
 
-# 시연 영상
-[![Video Label](http://img.youtube.com/vi/6tWUdvRLWro/0.jpg)](https://youtu.be/6tWUdvRLWro)
+
+
 ------
 
 ##
