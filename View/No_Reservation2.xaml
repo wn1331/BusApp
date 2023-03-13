@@ -1,0 +1,77 @@
+﻿<Page x:Class="BusApp.View.No_Reservation2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BusApp.View"
+       xmlns:System="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="547.144" d:DesignWidth="1071.742"
+      Title="No_Reservation2">
+
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="536" VerticalAlignment="Top" Width="283" Margin="0,0,0,0" Background="#7FFEFF99" BorderBrush="White">
+            <TextBlock TextWrapping="Wrap"/>
+        </ListBox>
+        <Button Content="" HorizontalAlignment="Left" Height="70" Margin="0,103,0,0" VerticalAlignment="Top" Width="283" BorderBrush="Transparent" Click="Button_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="/이미지/그림6.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="74" Margin="0,194,0,0" VerticalAlignment="Top" Width="283" BorderBrush="#00000000" Click="Button_Click_1" >
+            <Button.Background>
+                <ImageBrush ImageSource="/이미지/그림7.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button Content="" HorizontalAlignment="Left" Height="70" Margin="0,294,0,0" VerticalAlignment="Top" Width="283" BorderBrush="Transparent" Click="Button_Click_2">
+            <Button.Background>
+                <ImageBrush ImageSource="/이미지/그림8.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="233" VerticalAlignment="Top" Width="239" Margin="29,333,0,-18.8" Source="/이미지/그림3.png"/>
+        <Image HorizontalAlignment="Left" Height="103" VerticalAlignment="Top" Width="167" Source="/이미지/그림4.png" Margin="56,0,0,0"/>
+
+        <DatePicker x:Name="theDatePicker"  HorizontalAlignment="Left" Height="34" Margin="488,31,0,0" VerticalAlignment="Top" Width="143" FontSize="18" DisplayDateStart="{Binding Mode=OneWay, Source={x:Static
+            System:DateTime.Today}}"/>
+        <ComboBox x:Name="region1" HorizontalAlignment="Left" Height="28" Margin="364,72,0,0" VerticalAlignment="Top" Width="101" FontSize="18" RenderTransformOrigin="0.524,-0.025" BorderBrush="White" Background="White">
+            <ComboBoxItem Content="강릉" IsSelected="True"/>
+            <ComboBoxItem Content="대전"/>
+            <ComboBoxItem Content="부산"/>
+            <ComboBoxItem Content="서울"/>
+            <ComboBoxItem Content="전주"/>
+        </ComboBox>
+        <ComboBox x:Name="region2" HorizontalAlignment="Left" Height="28" Margin="541,71,0,0" VerticalAlignment="Top" Width="109" FontSize="18" BorderBrush="White" >
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="강릉" IsSelected="True"/>
+            <ComboBoxItem Content="대전"/>
+            <ComboBoxItem Content="부산"/>
+            <ComboBoxItem Content="서울"/>
+            <ComboBoxItem Content="전주"/>
+        </ComboBox>
+        <Border BorderBrush="LightGray" BorderThickness="3" HorizontalAlignment="Left" Height="495" Margin="756,30,-9,0" VerticalAlignment="Top" Width="325"/>
+        <TextBox x:Name="txtSelectedDate" Text="{Binding ElementName=theDatePicker, Path=SelectedDate, StringFormat=\{0:yyyy-MM-dd\},UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="882,133,0,0" FontSize="18"/>
+        <Label Content="세부사항" HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="135" Background="{x:Null}" FontSize="30" BorderBrush="White" FontWeight="Bold" Margin="848,45,0,0"/>
+        <Label Content="출발지" HorizontalAlignment="Left" Height="53" Margin="296,70,0,0" VerticalAlignment="Top" Width="66" FontSize="18" Foreground="#FFF38993" FontWeight="Bold"/>
+        <Label Content="도착지" HorizontalAlignment="Left" Height="48" Margin="470,70,0,0" VerticalAlignment="Top" Width="66" FontSize="18" Foreground="#FF83BEEC" FontWeight="Bold"/>
+        <DataGrid HorizontalAlignment="Left" x:Name="dtGrid" Height="407" Margin="296,118,0,0" VerticalAlignment="Top" Width="437" BorderBrush="{x:Null}" ItemsSource="{Binding}" SelectionChanged="dtGrid_SelectionChanged"/>
+        <Label Content="출발 날짜:" HorizontalAlignment="Left" Height="32" Margin="782,133,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.403,-0.481" FontSize="18" FontWeight="Bold"/>
+        <Label Content="▶" HorizontalAlignment="Left" Height="31" Margin="899,256,0,0" VerticalAlignment="Top" Width="29" FontSize="18" RenderTransformOrigin="0.557,0.128" FontWeight="Bold"/>
+
+        <Button Content="예매" HorizontalAlignment="Left" Height="45" Margin="801,455,0,0" VerticalAlignment="Top" Width="239" Click="Button4_Click" Background="#F6D8CE" BorderBrush="White" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+        <Label Content="날짜를 선택 해주세요." HorizontalAlignment="Left" Margin="296,30,0,0" VerticalAlignment="Top" Width="252" FontSize="18" Foreground="#FF83BEEC" FontWeight="Bold"/>
+        <Label Content="출발 시간      ▶ 도착 시간" HorizontalAlignment="Left" Height="31" Margin="782,194,0,0" VerticalAlignment="Top" Width="273" FontSize="18" RenderTransformOrigin="0.57,0.039" FontWeight="Bold"/>
+        <Button Content="search" HorizontalAlignment="Left" Height="75" Margin="657,30,0,0" VerticalAlignment="Top" Width="76" Background="LightGray" FontSize="20" FontWeight="Bold" BorderBrush="#FF737373" Click="Button_Click_3"/>
+        <GroupBox Header="Notice" HorizontalAlignment="Left" Height="86" Margin="778,357,0,0" VerticalAlignment="Top" Width="279" BorderBrush="#FF737373" FontSize="18" Foreground="Red" BorderThickness="3" FontWeight="Bold"/>
+        <Label Content="1인 1매만 구매 가능합니다." HorizontalAlignment="Left" Height="53" Margin="789,389,0,0" VerticalAlignment="Top" Width="259" FontSize="20" />
+        <TextBox x:Name="dep" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Margin="769,247,0,0" FontSize="18"/>
+        <TextBox x:Name="arr" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Margin="928,247,0,0" FontSize="18"/>
+        <Label Content="버스번호:" HorizontalAlignment="Left" Height="32" Margin="782,312,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.403,-0.481" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="bnum" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Margin="882,312,0,0" FontSize="18"/>
+    </Grid>
+</Page>

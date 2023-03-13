@@ -1,0 +1,50 @@
+﻿<Page x:Class="BusApp.View.Join"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BusApp.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="547.144" d:DesignWidth="1071.742"
+      Title="Join">
+
+
+    <Grid>
+
+        <ListBox HorizontalAlignment="Left" Height="536" VerticalAlignment="Top" Width="283" Margin="0,0,0,0" Background="#7FFEFF99" BorderBrush="White">
+            <TextBlock TextWrapping="Wrap"/>
+        </ListBox>
+        <Button Content="" HorizontalAlignment="Left" Height="70" Margin="0,103,0,0" VerticalAlignment="Top" Width="283" BorderBrush="Transparent" Click="Button_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="/이미지/그림6.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="74" Margin="0,194,0,0" VerticalAlignment="Top" Width="283" BorderBrush="#00000000" Click="Button_Click_1" >
+            <Button.Background>
+                <ImageBrush ImageSource="/이미지/그림7.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button Content="" HorizontalAlignment="Left" Height="70" Margin="0,294,0,0" VerticalAlignment="Top" Width="283" BorderBrush="Transparent" Click="Button_Click_2">
+            <Button.Background>
+                <ImageBrush ImageSource="/이미지/그림8.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="233" VerticalAlignment="Top" Width="239" Margin="29,333,0,-18.8" Source="/이미지/그림3.png"/>
+        <Image HorizontalAlignment="Left" Height="103" VerticalAlignment="Top" Width="167" Source="/이미지/그림4.png" Margin="56,0,0,0"/>
+
+        <TextBlock  HorizontalAlignment="Left" Height="50" Margin="612,53,0,0" TextWrapping="Wrap" Text="Join" VerticalAlignment="Top" Width="150" FontSize="30" TextAlignment="Center" RenderTransformOrigin="0.752,0.479" Foreground="#FF4C92CA" FontWeight="Bold"/>
+        <Label Content="ID를 입력하세요." HorizontalAlignment="Left" Height="39" Margin="451,274,0,0" VerticalAlignment="Top" Width="196" FontSize="18" Foreground="#FF060606"/>
+        <TextBox x:Name="textbox1" Text="{Binding U_Id}" HorizontalAlignment="Left" Height="33" Margin="660,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="18" BorderBrush="#FF83BEEC" />
+        <Label Content="PassWord를 입력하세요." HorizontalAlignment="Left" Height="41" Margin="451,328,0,0" VerticalAlignment="Top" Width="226" IsEnabled="False" FontSize="18" Foreground="Black"/>
+        <TextBox x:Name="textbox2" Text="{Binding U_Password}" HorizontalAlignment="Left" Height="33" Margin="660,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="18" BorderBrush="#FF83BEEC" />
+        <Label Content="이름을 입력하세요." HorizontalAlignment="Left" Height="39" Margin="446,158,0,0" VerticalAlignment="Top" Width="196" FontSize="18" Foreground="#FF060606"/>
+        <TextBox x:Name="textbox3" Text="{Binding U_Name}" HorizontalAlignment="Left" Height="33" Margin="660,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="18" BorderBrush="#FF83BEEC" />
+        <Label Content="생년월일을 입력하세요." HorizontalAlignment="Left" Height="39" Margin="446,221,0,0" VerticalAlignment="Top" Width="201" FontSize="18" Foreground="#FF060606"/>
+        <TextBox x:Name="textbox4" Text="{Binding U_Birth}" HorizontalAlignment="Left" Height="33" Margin="660,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="18" BorderBrush="#FF83BEEC" />
+        <TextBox x:Name="textbox5" Text="{Binding U_PhoneNum}" HorizontalAlignment="Left" Height="33" Margin="660,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="18" BorderBrush="#FF83BEEC" />
+        <Label Content="전화번호를 입력하세요." HorizontalAlignment="Left" Height="39" Margin="446,103,0,0" VerticalAlignment="Top" Width="201" FontSize="18" Foreground="#FF060606"/>
+        <Button Content="가입하기" HorizontalAlignment="Left" Height="55" Margin="504,387,0,0" VerticalAlignment="Top" Width="377" Foreground="White" Background="#FF83BEEC" FontSize="22" BorderBrush="#FF83BEEC" FontWeight="Bold" Click="Button_Click_3"/>
+
+    </Grid>
+</Page>
